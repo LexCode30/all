@@ -2,13 +2,14 @@
 // Course data
 // Course data
 const courses = [
-    {
-        "title": "Assembly 101",
-        "image": "Images/Assembly-101.png",
-        "link": "https://lexcode30.github.io/Assembly_101/",
-        "category": "cybersecurity"
-    }
-];
+        {
+            "title": "Assembly 101",
+            "image": "Images/Assembly-101.png",
+            "link": "https://LexCode30.github.io/Assembly_101/",
+            "category": "cybersecurity",
+            "description": "Assembly 101 is a video course in 16 sections, 84 lessons in total, covering \"Course Intro\" through \"Course Outro\"."
+        }
+    ];
 
 // App state
 const state = {
