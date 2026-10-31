@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses - Course Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0C8QRCRFF4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+ 
+  gtag('config', 'G-0C8QRCRFF4');
+</script>
+</head>
+<body>
+    
+    <div class="container">
+        <!-- Search Bar with Clear Button -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search courses..." aria-label="Search courses">
+            <button id="clear-search" class="clear-btn" aria-label="Clear search">×</button>
+        </div>
+
+        <!-- Results Info -->
+        <div id="results-info" class="results-info"></div>
+
+        <!-- No Results Message -->
+        <div id="no-results" class="no-results">
+            <p>No courses found. Try a different search term or filter.</p>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">All Courses</button>
+            <button class="filter-btn" data-category="cybersecurity">Cybersecurity</button>
+            <button class="filter-btn" data-category="programming">Programming</button>
+            <button class="filter-btn" data-category="systems">Systems</button>
+            <button class="filter-btn" data-category="web-development">Web Dev</button>
+            <button class="filter-btn" data-category="cloud">Cloud</button>
+            <button class="filter-btn" data-category="data-science">Data Science</button>
+        </div>
+
+        <!-- Courses Grid -->
+        <div class="courses-grid" id="courses-container">
+            <!-- Course cards will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Reset Filters Button -->
+        <button id="reset-search" class="reset-btn">Reset All Filters</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
