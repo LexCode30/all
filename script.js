@@ -162,6 +162,12 @@ const courses = [
             "image": "Images/Complete_Cybersecurity_Bootcamp.png",
             "link": "https://LexCode30.github.io/Complete_Cybersecurity_Bootcamp/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "CompTIA Security+ Certification Bootcamp",
+            "image": "Images/CompTIA_Security-_Certification_Bootcamp.png",
+            "link": "https://LexCode30.github.io/CompTIA_Security-_Certification_Bootcamp/",
+            "category": "cybersecurity"
         }
     ];
 
