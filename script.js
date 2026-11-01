@@ -126,6 +126,12 @@ const courses = [
             "image": "Images/Java_Essentials.png",
             "link": "https://LexCode30.github.io/Java_Essentials/",
             "category": "programming"
+        },
+        {
+            "title": "Mastering Kubernetes",
+            "image": "Images/Mastering_Kubernetes.png",
+            "link": "https://LexCode30.github.io/Mastering_Kubernetes/",
+            "category": "web-development"
         }
     ];
 
