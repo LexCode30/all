@@ -97,6 +97,12 @@ const courses = [
             "image": "Images/Python_201_For_Hackers.png",
             "link": "https://LexCode30.github.io/Python_201_For_Hackers/",
             "category": "programming"
+        },
+        {
+            "title": "Security Operations (SOC) 101",
+            "image": "Images/Security_Operations_-SOC-_101.png",
+            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_101/",
+            "category": "cybersecurity"
         }
     ];
 
