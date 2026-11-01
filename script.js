@@ -174,6 +174,12 @@ const courses = [
             "image": "Images/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin.png",
             "link": "https://LexCode30.github.io/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin/",
             "category": "systems"
+        },
+        {
+            "title": "Getting Started with Ansible Automation Made Easy",
+            "image": "Images/Getting_Started_with_Ansible_Automation_Made_Easy.png",
+            "link": "https://LexCode30.github.io/Getting_Started_with_Ansible_Automation_Made_Easy/",
+            "category": "systems"
         }
     ];
 
