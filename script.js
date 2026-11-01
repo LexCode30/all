@@ -156,6 +156,12 @@ const courses = [
             "image": "Images/Bash_Scripting_Learn_Shell_Scripting.png",
             "link": "https://LexCode30.github.io/Bash_Scripting_Learn_Shell_Scripting/",
             "category": "systems"
+        },
+        {
+            "title": "Complete Cybersecurity Bootcamp",
+            "image": "Images/Complete_Cybersecurity_Bootcamp.png",
+            "link": "https://LexCode30.github.io/Complete_Cybersecurity_Bootcamp/",
+            "category": "cybersecurity"
         }
     ];
 
