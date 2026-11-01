@@ -19,6 +19,12 @@ const courses = [
             "image": "Images/Detection_Engineering_for_Beginners.png",
             "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Linux 101",
+            "image": "Images/Linux_101.png",
+            "link": "https://LexCode30.github.io/Linux_101/",
+            "category": "systems"
         }
     ];
 
