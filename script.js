@@ -186,6 +186,12 @@ const courses = [
             "image": "Images/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert.png",
             "link": "https://LexCode30.github.io/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert/",
             "category": "programming"
+        },
+        {
+            "title": "Next.js Simplified",
+            "image": "Images/Next-js_Simplified.png",
+            "link": "https://LexCode30.github.io/Next-js_Simplified/",
+            "category": "web-development"
         }
     ];
 
