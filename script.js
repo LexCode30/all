@@ -85,6 +85,12 @@ const courses = [
             "image": "Images/Practical_Web_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_Web_Hacking/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Python 101 for Hackers",
+            "image": "Images/Python_101_for_Hackers.png",
+            "link": "https://LexCode30.github.io/Python_101_for_Hackers/",
+            "category": "programming"
         }
     ];
 
