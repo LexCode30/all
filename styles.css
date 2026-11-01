@@ -224,8 +224,8 @@ h1, h2 { line-height: 1.25; letter-spacing: -0.02em; font-weight: 650; }
 
 /* ---------- grid ---------- */
 .courses-grid {
-  display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: grid; gap: 1.1rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 .course-card {
   display: flex; flex-direction: column; overflow: hidden; color: inherit;
@@ -245,12 +245,6 @@ h1, h2 { line-height: 1.25; letter-spacing: -0.02em; font-weight: 650; }
   content: ''; position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(8, 8, 22, 0.72), transparent 62%);
 }
-.category-tag {
-  position: absolute; top: 0.7rem; left: 0.7rem; z-index: 1;
-  padding: 0.22rem 0.65rem; border-radius: var(--r-pill);
-  background: rgba(15, 15, 35, 0.74); color: #fff; backdrop-filter: blur(6px);
-  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
-}
 .done-tag {
   position: absolute; top: 0.7rem; right: 0.7rem; z-index: 1;
   display: inline-flex; align-items: center; gap: 0.3rem;
@@ -259,8 +253,8 @@ h1, h2 { line-height: 1.25; letter-spacing: -0.02em; font-weight: 650; }
   font-size: 0.68rem; font-weight: 700;
 }
 
-.course-info { padding: 1rem 1.1rem 1.2rem; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
-.course-title { font-size: 1rem; font-weight: 650; line-height: 1.35; flex: 1; }
+.course-info { padding: 1.15rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+.course-title { font-size: 1.1rem; font-weight: 650; line-height: 1.35; flex: 1; }
 
 .course-progress { display: flex; flex-direction: column; gap: 0.3rem; }
 .mini-bar {
@@ -276,7 +270,7 @@ h1, h2 { line-height: 1.25; letter-spacing: -0.02em; font-weight: 650; }
 
 .course-link {
   align-self: flex-start; display: inline-flex; align-items: center; gap: 0.4rem;
-  font-size: 0.84rem; font-weight: 650; color: var(--primary);
+  font-size: 0.88rem; font-weight: 650; color: var(--primary);
 }
 .course-card:hover .course-link { gap: 0.6rem; }
 
