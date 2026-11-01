@@ -150,6 +150,12 @@ const courses = [
             "image": "Images/AZ-900_Microsoft_Azure_Fundamentals.png",
             "link": "https://LexCode30.github.io/AZ-900_Microsoft_Azure_Fundamentals/",
             "category": "cloud"
+        },
+        {
+            "title": "Bash Scripting Learn Shell Scripting",
+            "image": "Images/Bash_Scripting_Learn_Shell_Scripting.png",
+            "link": "https://LexCode30.github.io/Bash_Scripting_Learn_Shell_Scripting/",
+            "category": "systems"
         }
     ];
 
