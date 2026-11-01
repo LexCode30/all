@@ -25,6 +25,12 @@ const courses = [
             "image": "Images/Linux_101.png",
             "link": "https://LexCode30.github.io/Linux_101/",
             "category": "systems"
+        },
+        {
+            "title": "Security Operations (SOC) 201",
+            "image": "Images/Security_Operations_-SOC-_201.png",
+            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
+            "category": "cybersecurity"
         }
     ];
 
