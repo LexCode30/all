@@ -234,6 +234,12 @@ const courses = [
             "image": "Images/Web_Security_-_Bug_Bounty_Learn_Penetration_Testing.png",
             "link": "https://LexCode30.github.io/Web_Security_-_Bug_Bounty_Learn_Penetration_Testing/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Windows Server 2022 Administration",
+            "image": "Images/Windows_Server_2022_Administration.png",
+            "link": "https://LexCode30.github.io/Windows_Server_2022_Administration/",
+            "category": "cloud"
         }
     ];
 
