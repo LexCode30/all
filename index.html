@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Courses - Course Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course library</title>
+<meta name="description" content="Video courses on security, systems and programming.">
+<meta name="color-scheme" content="dark light">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Course library">
+<meta property="og:description" content="Video courses on security, systems and programming.">
+<meta property="og:url" content="https://lexcode30.github.io/all/">
+<link rel="canonical" href="https://lexcode30.github.io/all/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0C8QRCRFF4"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
- 
-  gtag('config', 'G-0C8QRCRFF4');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0C8QRCRFF4');
 </script>
 </head>
 <body>
-    
-    <div class="container">
-        <!-- Search Bar with Clear Button -->
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Search courses..." aria-label="Search courses">
-            <button id="clear-search" class="clear-btn" aria-label="Clear search">×</button>
-        </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="bg-gradient" aria-hidden="true"></div>
+<div class="floating-shapes" aria-hidden="true"><span class="shape shape-1"></span><span class="shape shape-2"></span><span class="shape shape-3"></span></div>
 
-        <!-- Results Info -->
-        <div id="results-info" class="results-info"></div>
-
-        <!-- No Results Message -->
-        <div id="no-results" class="no-results">
-            <p>No courses found. Try a different search term or filter.</p>
-        </div>
-
-        <!-- Category Filter Buttons -->
-        <div class="filter-container">
-            <button class="filter-btn active" data-category="all">All Courses</button>
-            <button class="filter-btn" data-category="cybersecurity">Cybersecurity</button>
-            <button class="filter-btn" data-category="programming">Programming</button>
-            <button class="filter-btn" data-category="systems">Systems</button>
-            <button class="filter-btn" data-category="web-development">Web Dev</button>
-            <button class="filter-btn" data-category="cloud">Cloud</button>
-            <button class="filter-btn" data-category="data-science">Data Science</button>
-        </div>
-
-        <!-- Courses Grid -->
-        <div class="courses-grid" id="courses-container">
-            <!-- Course cards will be inserted here by JavaScript -->
-        </div>
-
-        <!-- Reset Filters Button -->
-        <button id="reset-search" class="reset-btn">Reset All Filters</button>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="./">
+      <span class="brand-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+      <span class="brand-text">
+        <span class="brand-title">Course library</span>
+        <span class="brand-sub" id="brandSub"></span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="themeToggle" aria-label="Switch between dark and light theme" title="Switch theme"><i class="fas fa-moon" aria-hidden="true"></i></button>
     </div>
+  </div>
+</header>
 
-    <script src="script.js"></script>
+<main class="main-container" id="main">
+
+  <section class="library-hero glassmorphism" id="heroCard">
+    <div class="hero-body">
+      <p class="eyebrow">Course library</p>
+      <h1 class="library-title">Everything in one place</h1>
+      <p class="library-sub" id="librarySub">Pick a course and start watching. Your progress is remembered in this browser.</p>
+      <dl class="hero-stats">
+        <div class="stat"><dt>Courses</dt><dd id="statCourses">0</dd></div>
+        <div class="stat"><dt>In progress</dt><dd id="statStarted">0</dd></div>
+        <div class="stat"><dt>Completed</dt><dd id="statDone">0</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="toolbar" aria-label="Find a course">
+    <div class="search-wrap">
+      <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+      <input type="search" id="search" placeholder="Search courses" aria-label="Search courses" autocomplete="off">
+      <button type="button" class="search-clear" id="clear-search" aria-label="Clear search" hidden><i class="fas fa-xmark" aria-hidden="true"></i></button>
+    </div>
+    <label class="sort-wrap">
+      <span class="sort-label">Sort</span>
+      <select id="sort" aria-label="Sort courses">
+        <option value="default">Default</option>
+        <option value="title">Title A–Z</option>
+        <option value="progress">Progress</option>
+      </select>
+    </label>
+  </section>
+
+  <nav class="filter-chips" id="filters" aria-label="Filter by category">
+    <button type="button" class="chip" data-category="all" aria-pressed="true">All courses</button>
+    <button type="button" class="chip" data-category="cybersecurity" aria-pressed="false">Cybersecurity</button>
+    <button type="button" class="chip" data-category="programming" aria-pressed="false">Programming</button>
+    <button type="button" class="chip" data-category="systems" aria-pressed="false">Systems</button>
+    <button type="button" class="chip" data-category="web-development" aria-pressed="false">Web Dev</button>
+    <button type="button" class="chip" data-category="cloud" aria-pressed="false">Cloud</button>
+    <button type="button" class="chip" data-category="data-science" aria-pressed="false">Data Science</button>
+  </nav>
+
+  <p class="results-info" id="results-info" role="status" aria-live="polite"></p>
+
+  <div class="courses-grid" id="courses-container" role="list"></div>
+
+  <p class="empty-state" id="no-results" hidden><i class="fas fa-magnifying-glass" aria-hidden="true"></i> No courses match that search.</p>
+
+  <button type="button" class="btn btn-ghost reset-btn" id="reset-search" hidden><i class="fas fa-rotate-left" aria-hidden="true"></i><span>Reset filters</span></button>
+</main>
+
+<footer class="site-footer">
+  <p>Course library &middot; progress is stored in this browser only</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
