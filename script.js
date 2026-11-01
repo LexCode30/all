@@ -79,6 +79,12 @@ const courses = [
             "image": "Images/Practical_Phishing_Campaigns.png",
             "link": "https://LexCode30.github.io/Practical_Phishing_Campaigns/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Practical Web Hacking",
+            "image": "Images/Practical_Web_Hacking.png",
+            "link": "https://LexCode30.github.io/Practical_Web_Hacking/",
+            "category": "cybersecurity"
         }
     ];
 
