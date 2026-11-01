@@ -6,8 +6,13 @@ const courses = [
             "title": "Assembly 101",
             "image": "Images/Assembly-101.png",
             "link": "https://LexCode30.github.io/Assembly_101/",
-            "category": "cybersecurity",
-            "description": "Assembly 101 is a video course in 16 sections, 84 lessons in total, covering \"Course Intro\" through \"Course Outro\"."
+            "category": "cybersecurity"
+        },
+        {
+            "title": "Windows Privilege Escalation for Beginners",
+            "image": "Images/Windows_Privilege_Escalation_for_Beginners.png",
+            "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
+            "category": "systems"
         }
     ];
 
