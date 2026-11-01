@@ -198,6 +198,12 @@ const courses = [
             "image": "Images/NGINX_Fundamentals_High_Performance_Servers_from_Scratch.png",
             "link": "https://LexCode30.github.io/NGINX_Fundamentals_High_Performance_Servers_from_Scratch/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "SC-900 Microsoft Security, Compliance, Identity Fundamentals",
+            "image": "Images/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals.png",
+            "link": "https://LexCode30.github.io/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals/",
+            "category": "cybersecurity"
         }
     ];
 
