@@ -37,6 +37,12 @@ const courses = [
             "image": "Images/Mobile_Application_Penetration_Testing.png",
             "link": "https://LexCode30.github.io/Mobile_Application_Penetration_Testing/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Movement Pivoting and Persistence",
+            "image": "Images/Movement_Pivoting_and_Persistence.png",
+            "link": "https://LexCode30.github.io/Movement_Pivoting_and_Persistence/",
+            "category": "cybersecurity"
         }
     ];
 
