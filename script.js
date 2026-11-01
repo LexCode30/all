@@ -31,6 +31,12 @@ const courses = [
             "image": "Images/Linux_Privilege_Escalation_for_Beginners.png",
             "link": "https://LexCode30.github.io/Linux_Privilege_Escalation_for_Beginners/",
             "category": "systems"
+        },
+        {
+            "title": "Mobile Application Penetration Testing",
+            "image": "Images/Mobile_Application_Penetration_Testing.png",
+            "link": "https://LexCode30.github.io/Mobile_Application_Penetration_Testing/",
+            "category": "cybersecurity"
         }
     ];
 
