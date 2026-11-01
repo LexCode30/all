@@ -111,7 +111,7 @@ const courses = [
         },
         {
             "title": "Windows Privilege Escalation for Beginners",
-            "image": "Images/Windows_Privilege_Escalation_for_Beginners.png",
+            "image": "Images/windows_previlege.png",
             "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
             "category": "systems"
         }
