@@ -67,6 +67,12 @@ const courses = [
             "image": "Images/Practical_Ethical_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_Ethical_Hacking/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Practical Malware Analysis and Triage",
+            "image": "Images/Practical_Malware_Analysis_and_Triage.png",
+            "link": "https://LexCode30.github.io/Practical_Malware_Analysis_and_Triage/",
+            "category": "cybersecurity"
         }
     ];
 
