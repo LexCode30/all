@@ -25,6 +25,12 @@ const courses = [
             "image": "Images/Linux_101.png",
             "link": "https://LexCode30.github.io/Linux_101/",
             "category": "systems"
+        },
+        {
+            "title": "Linux Privilege Escalation for Beginners",
+            "image": "Images/Linux_Privilege_Escalation_for_Beginners.png",
+            "link": "https://LexCode30.github.io/Linux_Privilege_Escalation_for_Beginners/",
+            "category": "systems"
         }
     ];
 
