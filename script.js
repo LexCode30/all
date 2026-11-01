@@ -61,6 +61,12 @@ const courses = [
             "image": "Images/Practical_Bug_Bounty.png",
             "link": "https://LexCode30.github.io/Practical_Bug_Bounty/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Practical Ethical Hacking",
+            "image": "Images/Practical_Ethical_Hacking.png",
+            "link": "https://LexCode30.github.io/Practical_Ethical_Hacking/",
+            "category": "cybersecurity"
         }
     ];
 
