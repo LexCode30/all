@@ -49,6 +49,12 @@ const courses = [
             "image": "Images/Open-Source_Intelligence_-OSINT-_Fundamentals.png",
             "link": "https://LexCode30.github.io/Open-Source_Intelligence_-OSINT-_Fundamentals/",
             "category": "programming"
+        },
+        {
+            "title": "Practical API Hacking",
+            "image": "Images/Practical_API_Hacking.png",
+            "link": "https://LexCode30.github.io/Practical_API_Hacking/",
+            "category": "cybersecurity"
         }
     ];
 
