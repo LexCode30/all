@@ -2,42 +2,7 @@
 // Course data
 // Course data
 const courses = [
-        {
-            "title": "Windows Privilege Escalation for Beginners",
-            "image": "Images/Windows_Privilege_Escalation_for_Beginners.png",
-            "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
-            "category": "systems"
-        },
-        {
-            "title": "C sharp 101 for Hackers",
-            "image": "Images/C_sharp_101_for_Hackers.png",
-            "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
-            "category": "programming"
-        },
-        {
-            "title": "Detection Engineering for Beginners",
-            "image": "Images/Detection_Engineering_for_Beginners.png",
-            "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Linux 101",
-            "image": "Images/Linux_101.png",
-            "link": "https://LexCode30.github.io/Linux_101/",
-            "category": "systems"
-        },
-        {
-            "title": "Security Operations (SOC) 201",
-            "image": "Images/Security_Operations_-SOC-_201.png",
-            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Security Operations (SOC) 101",
-            "image": "Images/Security_Operations_-SOC-_101.png",
-            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_101/",
-            "category": "cybersecurity"
-        }
+
     ];
 
 // App state
