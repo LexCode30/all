@@ -114,6 +114,12 @@ const courses = [
             "image": "Images/windows_previlege.png",
             "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
             "category": "systems"
+        },
+        {
+            "title": " Elastic Stack Getting Started",
+            "image": "Images/Elastic_Stack_Getting_Started.png",
+            "link": "https://LexCode30.github.io/Elastic_Stack_Getting_Started/",
+            "category": "programming"
         }
     ];
 
