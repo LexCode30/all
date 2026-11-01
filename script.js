@@ -138,6 +138,12 @@ const courses = [
             "image": "Images/AWS_Certified_Cloud_Practitioner.png",
             "link": "https://LexCode30.github.io/AWS_Certified_Cloud_Practitioner/",
             "category": "cloud"
+        },
+        {
+            "title": "AWS Certified Solutions Architect",
+            "image": "Images/AWS_Certified_Solutions_Architect.png",
+            "link": "https://LexCode30.github.io/AWS_Certified_Solutions_Architect/",
+            "category": "cloud"
         }
     ];
 
