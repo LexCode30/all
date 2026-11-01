@@ -144,6 +144,12 @@ const courses = [
             "image": "Images/AWS_Certified_Solutions_Architect.png",
             "link": "https://LexCode30.github.io/AWS_Certified_Solutions_Architect/",
             "category": "cloud"
+        },
+        {
+            "title": "AZ-900 Microsoft Azure Fundamentals",
+            "image": "Images/AZ-900_Microsoft_Azure_Fundamentals.png",
+            "link": "https://LexCode30.github.io/AZ-900_Microsoft_Azure_Fundamentals/",
+            "category": "cloud"
         }
     ];
 
