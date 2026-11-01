@@ -120,6 +120,12 @@ const courses = [
             "image": "Images/Elastic_Stack_Getting_Started.png",
             "link": "https://LexCode30.github.io/Elastic_Stack_Getting_Started/",
             "category": "programming"
+        },
+        {
+            "title": "Java Essentials",
+            "image": "Images/Java_Essentials.png",
+            "link": "https://LexCode30.github.io/Java_Essentials/",
+            "category": "programming"
         }
     ];
 
