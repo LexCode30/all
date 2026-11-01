@@ -55,6 +55,12 @@ const courses = [
             "image": "Images/Practical_API_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_API_Hacking/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Practical Bug Bounty",
+            "image": "Images/Practical_Bug_Bounty.png",
+            "link": "https://LexCode30.github.io/Practical_Bug_Bounty/",
+            "category": "cybersecurity"
         }
     ];
 
