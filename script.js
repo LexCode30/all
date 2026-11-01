@@ -1,115 +1,115 @@
 // Course data. The generator maintains this array: it adds and updates
 // entries in place, so everything below it is safe to edit.
 const courses = [
-        {
-            "title": "Assembly 101",
-            "image": "Images/Assembly_101.png",
-            "link": "https://LexCode30.github.io/Assembly_101/",
-            "category": "systems"
-        },
-        {
-            "title": "C sharp 101 for Hackers",
-            "image": "Images/C_sharp_101_for_Hackers.png",
-            "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
-            "category": "programming"
-        },
-        {
-            "title": "Detection Engineering for Beginners",
-            "image": "Images/Detection_Engineering_for_Beginners.png",
-            "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Linux 101",
-            "image": "Images/Linux_101.png",
-            "link": "https://LexCode30.github.io/Linux_101/",
-            "category": "systems"
-        },
-        {
-            "title": "Linux Privilege Escalation for Beginners",
-            "image": "Images/Linux_Privilege_Escalation_for_Beginners.png",
-            "link": "https://LexCode30.github.io/Linux_Privilege_Escalation_for_Beginners/",
-            "category": "systems"
-        },
-        {
-            "title": "Mobile Application Penetration Testing",
-            "image": "Images/Mobile_Application_Penetration_Testing.png",
-            "link": "https://LexCode30.github.io/Mobile_Application_Penetration_Testing/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Movement Pivoting and Persistence",
-            "image": "Images/Movement_Pivoting_and_Persistence.png",
-            "link": "https://LexCode30.github.io/Movement_Pivoting_and_Persistence/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Open-Source Intelligence (OSINT) Fundamentals",
-            "image": "Images/Open-Source_Intelligence_-OSINT-_Fundamentals.png",
-            "link": "https://LexCode30.github.io/Open-Source_Intelligence_-OSINT-_Fundamentals/",
-            "category": "programming"
-        },
-        {
-            "title": "Practical API Hacking",
-            "image": "Images/Practical_API_Hacking.png",
-            "link": "https://LexCode30.github.io/Practical_API_Hacking/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Practical Bug Bounty",
-            "image": "Images/Practical_Bug_Bounty.png",
-            "link": "https://LexCode30.github.io/Practical_Bug_Bounty/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Practical Ethical Hacking",
-            "image": "Images/Practical_Ethical_Hacking.png",
-            "link": "https://LexCode30.github.io/Practical_Ethical_Hacking/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Practical Malware Analysis and Triage",
-            "image": "Images/Practical_Malware_Analysis_and_Triage.png",
-            "link": "https://LexCode30.github.io/Practical_Malware_Analysis_and_Triage/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Practical Phishing Campaigns",
-            "image": "Images/Practical_Phishing_Campaigns.png",
-            "link": "https://LexCode30.github.io/Practical_Phishing_Campaigns/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Practical Web Hacking",
-            "image": "Images/Practical_Web_Hacking.png",
-            "link": "https://LexCode30.github.io/Practical_Web_Hacking/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Python 101 for Hackers",
-            "image": "Images/Python_101_for_Hackers.png",
-            "link": "https://LexCode30.github.io/Python_101_for_Hackers/",
-            "category": "programming"
-        },
-        {
-            "title": "Python 201 For Hackers",
-            "image": "Images/Python_201_For_Hackers.png",
-            "link": "https://LexCode30.github.io/Python_201_For_Hackers/",
-            "category": "programming"
-        },
-        {
-            "title": "Security Operations (SOC) 101",
-            "image": "Images/Security_Operations_-SOC-_101.png",
-            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_101/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "Security Operations (SOC) 201",
-            "image": "Images/Security_Operations_-SOC-_201.png",
-            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
-            "category": "cybersecurity"
-        }
-    ];
+    {
+        "title": "Assembly 101",
+        "image": "Images/Assembly-101.png",
+        "link": "https://LexCode30.github.io/Assembly_101/",
+        "category": "systems"
+    },
+    {
+        "title": "C sharp 101 for Hackers",
+        "image": "Images/C_sharp.webp",
+        "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
+        "category": "programming"
+    },
+    {
+        "title": "Detection Engineering for Beginners",
+        "image": "Images/detection.jpg",
+        "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Linux 101",
+        "image": "Images/linux101.png",
+        "link": "https://LexCode30.github.io/Linux_101/",
+        "category": "systems"
+    },
+    {
+        "title": "Linux Privilege Escalation for Beginners",
+        "image": "Images/linux_previlege.png",
+        "link": "https://LexCode30.github.io/Linux_Privilege_Escalation_for_Beginners/",
+        "category": "systems"
+    },
+    {
+        "title": "Mobile Application Penetration Testing",
+        "image": "Images/mobile.png",
+        "link": "https://LexCode30.github.io/Mobile_Application_Penetration_Testing/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Movement Pivoting and Persistence",
+        "image": "Images/MPP.jpeg",
+        "link": "https://LexCode30.github.io/Movement_Pivoting_and_Persistence/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Open-Source Intelligence (OSINT) Fundamentals",
+        "image": "Images/OSINT.png",
+        "link": "https://LexCode30.github.io/Open-Source_Intelligence_-OSINT-_Fundamentals/",
+        "category": "programming"
+    },
+    {
+        "title": "Practical API Hacking",
+        "image": "Images/API_hack.png",
+        "link": "https://LexCode30.github.io/Practical_API_Hacking/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Practical Bug Bounty",
+        "image": "Images/bug.png",
+        "link": "https://LexCode30.github.io/Practical_Bug_Bounty/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Practical Ethical Hacking",
+        "image": "Images/ETH.png",
+        "link": "https://LexCode30.github.io/Practical_Ethical_Hacking/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Practical Malware Analysis and Triage",
+        "image": "Images/malware.png",
+        "link": "https://LexCode30.github.io/Practical_Malware_Analysis_and_Triage/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Practical Phishing Campaigns",
+        "image": "Images/phishing.png",
+        "link": "https://LexCode30.github.io/Practical_Phishing_Campaigns/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Practical Web Hacking",
+        "image": "Images/web_hack.webp",
+        "link": "https://LexCode30.github.io/Practical_Web_Hacking/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Python 101 for Hackers",
+        "image": "Images/Python_101.png",
+        "link": "https://LexCode30.github.io/Python_101_for_Hackers/",
+        "category": "programming"
+    },
+    {
+        "title": "Python 201 For Hackers",
+        "image": "Images/Python_201.png",
+        "link": "https://LexCode30.github.io/Python_201_For_Hackers/",
+        "category": "programming"
+    },
+    {
+        "title": "Security Operations (SOC) 101",
+        "image": "Images/soc.webp",
+        "link": "https://LexCode30.github.io/Security_Operations_-SOC-_101/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "Security Operations (SOC) 201",
+        "image": "Images/SOC-201.png",
+        "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
+        "category": "cybersecurity"
+    }
+];
 
 (function () {
   "use strict";
