@@ -216,6 +216,12 @@ const courses = [
             "image": "Images/The_Ultimate_Docker_Course.png",
             "link": "https://LexCode30.github.io/The_Ultimate_Docker_Course/",
             "category": "systems"
+        },
+        {
+            "title": "The Ultimate JavaScript Series",
+            "image": "Images/The_Ultimate_JavaScript_Series.png",
+            "link": "https://LexCode30.github.io/The_Ultimate_JavaScript_Series/",
+            "category": "web-development"
         }
     ];
 
