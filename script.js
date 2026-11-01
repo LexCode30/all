@@ -13,6 +13,12 @@ const courses = [
             "image": "Images/C_sharp_101_for_Hackers.png",
             "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
             "category": "programming"
+        },
+        {
+            "title": "Detection Engineering for Beginners",
+            "image": "Images/Detection_Engineering_for_Beginners.png",
+            "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
+            "category": "cybersecurity"
         }
     ];
 
