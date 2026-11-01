@@ -7,6 +7,12 @@ const courses = [
             "image": "Images/Windows_Privilege_Escalation_for_Beginners.png",
             "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
             "category": "systems"
+        },
+        {
+            "title": "Security Operations (SOC) 201",
+            "image": "Images/Security_Operations_-SOC-_201.png",
+            "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
+            "category": "cybersecurity"
         }
     ];
 
