@@ -204,6 +204,12 @@ const courses = [
             "image": "Images/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals.png",
             "link": "https://LexCode30.github.io/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "The Complete Certified in Cybersecurity CC course ISC2",
+            "image": "Images/The_Complete_Certified_in_Cybersecurity_CC_course_ISC2.png",
+            "link": "https://LexCode30.github.io/The_Complete_Certified_in_Cybersecurity_CC_course_ISC2/",
+            "category": "cybersecurity"
         }
     ];
 
