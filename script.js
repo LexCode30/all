@@ -132,6 +132,12 @@ const courses = [
             "image": "Images/Mastering_Kubernetes.png",
             "link": "https://LexCode30.github.io/Mastering_Kubernetes/",
             "category": "web-development"
+        },
+        {
+            "title": "AWS Certified Cloud Practitioner",
+            "image": "Images/AWS_Certified_Cloud_Practitioner.png",
+            "link": "https://LexCode30.github.io/AWS_Certified_Cloud_Practitioner/",
+            "category": "cloud"
         }
     ];
 
