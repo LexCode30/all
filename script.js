@@ -2,7 +2,12 @@
 // Course data
 // Course data
 const courses = [
-
+        {
+            "title": "Assembly 101",
+            "image": "Images/Assembly_101.png",
+            "link": "https://LexCode30.github.io/Assembly_101/",
+            "category": "systems"
+        }
     ];
 
 // App state
