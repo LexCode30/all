@@ -192,6 +192,12 @@ const courses = [
             "image": "Images/Next-js_Simplified.png",
             "link": "https://LexCode30.github.io/Next-js_Simplified/",
             "category": "web-development"
+        },
+        {
+            "title": "NGINX Fundamentals High Performance Servers from Scratch",
+            "image": "Images/NGINX_Fundamentals_High_Performance_Servers_from_Scratch.png",
+            "link": "https://LexCode30.github.io/NGINX_Fundamentals_High_Performance_Servers_from_Scratch/",
+            "category": "cybersecurity"
         }
     ];
 
