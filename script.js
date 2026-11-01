@@ -43,6 +43,12 @@ const courses = [
             "image": "Images/Movement_Pivoting_and_Persistence.png",
             "link": "https://LexCode30.github.io/Movement_Pivoting_and_Persistence/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Open-Source Intelligence (OSINT) Fundamentals",
+            "image": "Images/Open-Source_Intelligence_-OSINT-_Fundamentals.png",
+            "link": "https://LexCode30.github.io/Open-Source_Intelligence_-OSINT-_Fundamentals/",
+            "category": "programming"
         }
     ];
 
