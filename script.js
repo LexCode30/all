@@ -7,6 +7,12 @@ const courses = [
             "image": "Images/Assembly_101.png",
             "link": "https://LexCode30.github.io/Assembly_101/",
             "category": "systems"
+        },
+        {
+            "title": "C sharp 101 for Hackers",
+            "image": "Images/C_sharp_101_for_Hackers.png",
+            "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
+            "category": "programming"
         }
     ];
 
