@@ -73,6 +73,12 @@ const courses = [
             "image": "Images/Practical_Malware_Analysis_and_Triage.png",
             "link": "https://LexCode30.github.io/Practical_Malware_Analysis_and_Triage/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Practical Phishing Campaigns",
+            "image": "Images/Practical_Phishing_Campaigns.png",
+            "link": "https://LexCode30.github.io/Practical_Phishing_Campaigns/",
+            "category": "cybersecurity"
         }
     ];
 
