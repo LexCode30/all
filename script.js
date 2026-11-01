@@ -115,120 +115,120 @@ const courses = [
             "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
             "category": "systems"
         },
-        {
-            "title": " Elastic Stack Getting Started",
-            "image": "Images/Elastic_Stack_Getting_Started.png",
-            "link": "https://LexCode30.github.io/Elastic_Stack_Getting_Started/",
-            "category": "programming"
-        },
-        {
-            "title": "Java Essentials",
-            "image": "Images/Java_Essentials.png",
-            "link": "https://LexCode30.github.io/Java_Essentials/",
-            "category": "programming"
-        },
-        {
-            "title": "Mastering Kubernetes",
-            "image": "Images/Mastering_Kubernetes.png",
-            "link": "https://LexCode30.github.io/Mastering_Kubernetes/",
-            "category": "web-development"
-        },
-        {
-            "title": "AWS Certified Cloud Practitioner",
-            "image": "Images/AWS_Certified_Cloud_Practitioner.png",
-            "link": "https://LexCode30.github.io/AWS_Certified_Cloud_Practitioner/",
-            "category": "cloud"
-        },
-        {
-            "title": "AWS Certified Solutions Architect",
-            "image": "Images/AWS_Certified_Solutions_Architect.png",
-            "link": "https://LexCode30.github.io/AWS_Certified_Solutions_Architect/",
-            "category": "cloud"
-        },
-        {
-            "title": "AZ-900 Microsoft Azure Fundamentals",
-            "image": "Images/AZ-900_Microsoft_Azure_Fundamentals.png",
-            "link": "https://LexCode30.github.io/AZ-900_Microsoft_Azure_Fundamentals/",
-            "category": "cloud"
-        },
-        {
-            "title": "Bash Scripting Learn Shell Scripting",
-            "image": "Images/Bash_Scripting_Learn_Shell_Scripting.png",
-            "link": "https://LexCode30.github.io/Bash_Scripting_Learn_Shell_Scripting/",
-            "category": "systems"
-        },
-        {
-            "title": "Complete Cybersecurity Bootcamp",
-            "image": "Images/Complete_Cybersecurity_Bootcamp.png",
-            "link": "https://LexCode30.github.io/Complete_Cybersecurity_Bootcamp/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "CompTIA Security+ Certification Bootcamp",
-            "image": "Images/CompTIA_Security-_Certification_Bootcamp.png",
-            "link": "https://LexCode30.github.io/CompTIA_Security-_Certification_Bootcamp/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "DevOps Bootcamp Learn Linux & Become a Linux Sysadmin",
-            "image": "Images/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin.png",
-            "link": "https://LexCode30.github.io/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin/",
-            "category": "systems"
-        },
-        {
-            "title": "Getting Started with Ansible Automation Made Easy",
-            "image": "Images/Getting_Started_with_Ansible_Automation_Made_Easy.png",
-            "link": "https://LexCode30.github.io/Getting_Started_with_Ansible_Automation_Made_Easy/",
-            "category": "systems"
-        },
-        {
-            "title": "Master Python Hacking plus then 15 Projects from Beginner to Expert",
-            "image": "Images/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert.png",
-            "link": "https://LexCode30.github.io/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert/",
-            "category": "programming"
-        },
-        {
-            "title": "Next.js Simplified",
-            "image": "Images/Next-js_Simplified.png",
-            "link": "https://LexCode30.github.io/Next-js_Simplified/",
-            "category": "web-development"
-        },
-        {
-            "title": "NGINX Fundamentals High Performance Servers from Scratch",
-            "image": "Images/NGINX_Fundamentals_High_Performance_Servers_from_Scratch.png",
-            "link": "https://LexCode30.github.io/NGINX_Fundamentals_High_Performance_Servers_from_Scratch/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "SC-900 Microsoft Security, Compliance, Identity Fundamentals",
-            "image": "Images/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals.png",
-            "link": "https://LexCode30.github.io/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "The Complete Certified in Cybersecurity CC course ISC2",
-            "image": "Images/The_Complete_Certified_in_Cybersecurity_CC_course_ISC2.png",
-            "link": "https://LexCode30.github.io/The_Complete_Certified_in_Cybersecurity_CC_course_ISC2/",
-            "category": "cybersecurity"
-        },
-        {
-            "title": "The Ultimate Docker Course",
-            "image": "Images/The_Ultimate_Docker_Course.png",
-            "link": "https://LexCode30.github.io/The_Ultimate_Docker_Course/",
-            "category": "systems"
-        },
-        {
-            "title": "The Ultimate JavaScript Series",
-            "image": "Images/The_Ultimate_JavaScript_Series.png",
-            "link": "https://LexCode30.github.io/The_Ultimate_JavaScript_Series/",
-            "category": "web-development"
-        },
-        {
-            "title": "The Ultimate React Course React",
-            "image": "Images/The_Ultimate_React_Course_React.png",
-            "link": "https://LexCode30.github.io/The_Ultimate_React_Course_React/",
-            "category": "web-development"
-        }
+            {
+        "title": " Elastic Stack Getting Started",
+        "image": "https://i.ytimg.com/vi/FImTcHECpC0/mqdefault.jpg",
+        "link": "https://LexCode30.github.io/Elastic_Stack_Getting_Started/",
+        "category": "programming"
+    },
+    {
+        "title": "Java Essentials",
+        "image": "https://m.media-amazon.com/images/I/91AB88mdK8L._AC_UF350,350_QL50_.jpg",
+        "link": "https://LexCode30.github.io/Java_Essentials/",
+        "category": "programming"
+    },
+    {
+        "title": "Mastering Kubernetes",
+        "image": "https://www.uptycs.com/hs-fs/hubfs/mastering-kubernetes-container-security.jpg?width=352&name=mastering-kubernetes-container-security.jpg",
+        "link": "https://LexCode30.github.io/Mastering_Kubernetes/",
+        "category": "web-development"
+    },
+    {
+        "title": "AWS Certified Cloud Practitioner",
+        "image": "https://d2908q01vomqb2.cloudfront.net/9109c85a45b703f87f1413a405549a2cea9ab556/2020/11/10/AWSCloudPractitionerEssentialsBlog_300x150.png",
+        "link": "https://LexCode30.github.io/AWS_Certified_Cloud_Practitioner/",
+        "category": "cloud"
+    },
+    {
+        "title": "AWS Certified Solutions Architect",
+        "image": "https://img-c.udemycdn.com/course/240x135/5914092_588d_2.jpg",
+        "link": "https://LexCode30.github.io/AWS_Certified_Solutions_Architect/",
+        "category": "cloud"
+    },
+    {
+        "title": "AZ-900 Microsoft Azure Fundamentals",
+        "image": "https://img-c.udemycdn.com/course/240x135/3140524_2f2f_8.jpg",
+        "link": "https://LexCode30.github.io/AZ-900_Microsoft_Azure_Fundamentals/",
+        "category": "cloud"
+    },
+    {
+        "title": "Bash Scripting Learn Shell Scripting",
+        "image": "https://images.ctfassets.net/aq13lwl6616q/395iMiqbPBUPQGGEluVUXT/ca0636cf2e4f182c5f5821386bcd02ee/Academy_3_Course_Thumbnail_-_Bash_Programming.png?w=400&fm=webp",
+        "link": "https://LexCode30.github.io/Bash_Scripting_Learn_Shell_Scripting/",
+        "category": "systems"
+    },
+    {
+        "title": "Complete Cybersecurity Bootcamp",
+        "image": "https://www.itcareerfinder.com/images/best-cybersecurity-bootcamps-online-2024.gif",
+        "link": "https://LexCode30.github.io/Complete_Cybersecurity_Bootcamp/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "CompTIA Security+ Certification Bootcamp",
+        "image": "https://img-c.udemycdn.com/course/240x135/2616890_6925.jpg",
+        "link": "https://LexCode30.github.io/CompTIA_Security-_Certification_Bootcamp/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "DevOps Bootcamp Learn Linux & Become a Linux Sysadmin",
+        "image": "https://images.ctfassets.net/aq13lwl6616q/Lxp7NOjFmtq9IlqyBKgPt/b868427a9f388c8105f051bf1c6062f3/Linux_sysadmin_DevOps_Series.png?w=400&h=225&q=50&fm=png&bg=transparent",
+        "link": "https://LexCode30.github.io/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin/",
+        "category": "systems"
+    },
+    {
+        "title": "Getting Started with Ansible Automation Made Easy",
+        "image": "https://img-c.udemycdn.com/course/240x135/6032754_930e.jpg",
+        "link": "https://LexCode30.github.io/Getting_Started_with_Ansible_Automation_Made_Easy/",
+        "category": "systems"
+    },
+    {
+        "title": "Master Python Hacking plus then 15 Projects from Beginner to Expert",
+        "image": "https://img-c.udemycdn.com/course/240x135/6124711_54b8_2.jpg",
+        "link": "https://LexCode30.github.io/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert/",
+        "category": "programming"
+    },
+    {
+        "title": "Next.js Simplified",
+        "image": "https://i.ytimg.com/vi/nHnw3pusFXw/mqdefault.jpg",
+        "link": "https://LexCode30.github.io/Next-js_Simplified/",
+        "category": "web-development"
+    },
+    {
+        "title": "NGINX Fundamentals High Performance Servers from Scratch",
+        "image": "https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image/9a4da97c3b99.jpg",
+        "link": "https://LexCode30.github.io/NGINX_Fundamentals_High_Performance_Servers_from_Scratch/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "SC-900 Microsoft Security, Compliance, Identity Fundamentals",
+        "image": "Images/SC-900.webp",
+        "link": "https://LexCode30.github.io/SC-900_Microsoft_Security-_Compliance-_Identity_Fundamentals/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "The Complete Certified in Cybersecurity CC course ISC2",
+        "image": "https://img-c.udemycdn.com/course/240x135/6169361_cc9d.jpg",
+        "link": "https://LexCode30.github.io/The_Complete_Certified_in_Cybersecurity_CC_course_ISC2/",
+        "category": "cybersecurity"
+    },
+    {
+        "title": "The Ultimate Docker Course",
+        "image": "https://img-c.udemycdn.com/course/240x135/5730026_f14f_6.jpg",
+        "link": "https://LexCode30.github.io/The_Ultimate_Docker_Course/",
+        "category": "systems"
+    },
+    {
+        "title": "The Ultimate JavaScript Series",
+        "image": "https://i.ytimg.com/vi/8w_oH58AvoA/mqdefault.jpg",
+        "link": "https://LexCode30.github.io/The_Ultimate_JavaScript_Series/",
+        "category": "web-development"
+    },
+    {
+        "title": "The Ultimate React Course React",
+        "image": "https://img-c.udemycdn.com/course/240x135/5512768_ffa4_29.jpg",
+        "link": "https://LexCode30.github.io/The_Ultimate_React_Course_React/",
+        "category": "web-development"
+    }
     ];
 
 (function () {
