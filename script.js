@@ -168,6 +168,12 @@ const courses = [
             "image": "Images/CompTIA_Security-_Certification_Bootcamp.png",
             "link": "https://LexCode30.github.io/CompTIA_Security-_Certification_Bootcamp/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "DevOps Bootcamp Learn Linux & Become a Linux Sysadmin",
+            "image": "Images/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin.png",
+            "link": "https://LexCode30.github.io/DevOps_Bootcamp_Learn_Linux_-_Become_a_Linux_Sysadmin/",
+            "category": "systems"
         }
     ];
 
