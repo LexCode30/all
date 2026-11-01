@@ -222,6 +222,12 @@ const courses = [
             "image": "Images/The_Ultimate_JavaScript_Series.png",
             "link": "https://LexCode30.github.io/The_Ultimate_JavaScript_Series/",
             "category": "web-development"
+        },
+        {
+            "title": "The Ultimate React Course React",
+            "image": "Images/The_Ultimate_React_Course_React.png",
+            "link": "https://LexCode30.github.io/The_Ultimate_React_Course_React/",
+            "category": "web-development"
         }
     ];
 
