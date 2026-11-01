@@ -7,6 +7,12 @@ const courses = [
             "image": "Images/Windows_Privilege_Escalation_for_Beginners.png",
             "link": "https://LexCode30.github.io/Windows_Privilege_Escalation_for_Beginners/",
             "category": "systems"
+        },
+        {
+            "title": "C sharp 101 for Hackers",
+            "image": "Images/C_sharp_101_for_Hackers.png",
+            "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
+            "category": "programming"
         }
     ];
 
