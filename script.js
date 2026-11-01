@@ -180,6 +180,12 @@ const courses = [
             "image": "Images/Getting_Started_with_Ansible_Automation_Made_Easy.png",
             "link": "https://LexCode30.github.io/Getting_Started_with_Ansible_Automation_Made_Easy/",
             "category": "systems"
+        },
+        {
+            "title": "Master Python Hacking plus then 15 Projects from Beginner to Expert",
+            "image": "Images/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert.png",
+            "link": "https://LexCode30.github.io/Master_Python_Hacking_plus_then_15_Projects_from_Beginner_to_Expert/",
+            "category": "programming"
         }
     ];
 
