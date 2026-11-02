@@ -224,12 +224,6 @@ const courses = [
             "category": "web-development"
         },
         {
-            "title": "The Ultimate React Course React",
-            "image": "https://img-c.udemycdn.com/course/240x135/5512768_ffa4_29.jpg",
-            "link": "https://LexCode30.github.io/The_Ultimate_React_Course_React/",
-            "category": "web-development"
-        },
-        {
             "title": "Web Security & Bug Bounty Learn Penetration Testing",
             "image": "https://img-c.udemycdn.com/course/240x135/3985968_eafc_4.jpg",
             "link": "https://LexCode30.github.io/Web_Security_-_Bug_Bounty_Learn_Penetration_Testing/",
