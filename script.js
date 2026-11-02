@@ -231,13 +231,13 @@ const courses = [
         },
         {
             "title": "Web Security & Bug Bounty Learn Penetration Testing",
-            "image": "Images/Web_Security_-_Bug_Bounty_Learn_Penetration_Testing.png",
+            "image": "https://img-c.udemycdn.com/course/240x135/3985968_eafc_4.jpg",
             "link": "https://LexCode30.github.io/Web_Security_-_Bug_Bounty_Learn_Penetration_Testing/",
             "category": "cybersecurity"
         },
         {
             "title": "Windows Server 2022 Administration",
-            "image": "Images/Windows_Server_2022_Administration.png",
+            "image": "Images/Windows Server 2022.png",
             "link": "https://LexCode30.github.io/Windows_Server_2022_Administration/",
             "category": "cloud"
         }
