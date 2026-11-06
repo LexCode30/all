@@ -234,6 +234,12 @@ const courses = [
             "image": "Images/Windows Server 2022.png",
             "link": "https://LexCode30.github.io/Windows_Server_2022_Administration/",
             "category": "cloud"
+        },
+        {
+            "title": "CSharp Advanced Topics - Prepare for Technical Interviews",
+            "image": "Images/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews.png",
+            "link": "https://LexCode30.github.io/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews/",
+            "category": "programming"
         }
     ];
 
