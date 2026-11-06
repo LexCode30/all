@@ -258,6 +258,12 @@ const courses = [
             "image": "Images/Advanced_Malware_Analysis_Redux.png",
             "link": "https://LexCode30.github.io/Advanced_Malware_Analysis_Redux/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Cybrary-Offensive Penetration Testing",
+            "image": "Images/Cybrary-Offensive_Penetration_Testing.png",
+            "link": "https://LexCode30.github.io/Cybrary-Offensive_Penetration_Testing/",
+            "category": "cybersecurity"
         }
     ];
 
