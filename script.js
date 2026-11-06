@@ -3,109 +3,109 @@
 const courses = [
         {
             "title": "Assembly 101",
-            "image": "Images/Assembly-101.png",
+            "image": "Images/Assembly_101.png",
             "link": "https://LexCode30.github.io/Assembly_101/",
             "category": "systems"
         },
         {
             "title": "C sharp 101 for Hackers",
-            "image": "Images/C_sharp.webp",
+            "image": "Images/C_sharp_101_for_Hackers.png",
             "link": "https://LexCode30.github.io/C_sharp_101_for_Hackers/",
             "category": "programming"
         },
         {
             "title": "Detection Engineering for Beginners",
-            "image": "Images/detection.jpg",
+            "image": "Images/Detection_Engineering_for_Beginners.png",
             "link": "https://LexCode30.github.io/Detection_Engineering_for_Beginners/",
             "category": "cybersecurity"
         },
         {
             "title": "Linux 101",
-            "image": "Images/linux101.png",
+            "image": "Images/Linux_101.png",
             "link": "https://LexCode30.github.io/Linux_101/",
             "category": "systems"
         },
         {
             "title": "Linux Privilege Escalation for Beginners",
-            "image": "Images/linux_previlege.png",
+            "image": "Images/Linux_Privilege_Escalation_for_Beginners.png",
             "link": "https://LexCode30.github.io/Linux_Privilege_Escalation_for_Beginners/",
             "category": "systems"
         },
         {
             "title": "Mobile Application Penetration Testing",
-            "image": "Images/mobile.png",
+            "image": "Images/Mobile_Application_Penetration_Testing.png",
             "link": "https://LexCode30.github.io/Mobile_Application_Penetration_Testing/",
             "category": "cybersecurity"
         },
         {
             "title": "Movement Pivoting and Persistence",
-            "image": "Images/MPP.jpeg",
+            "image": "Images/Movement_Pivoting_and_Persistence.png",
             "link": "https://LexCode30.github.io/Movement_Pivoting_and_Persistence/",
             "category": "cybersecurity"
         },
         {
             "title": "Open-Source Intelligence (OSINT) Fundamentals",
-            "image": "Images/OSINT.png",
+            "image": "Images/Open-Source_Intelligence_-OSINT-_Fundamentals.png",
             "link": "https://LexCode30.github.io/Open-Source_Intelligence_-OSINT-_Fundamentals/",
             "category": "programming"
         },
         {
             "title": "Practical API Hacking",
-            "image": "Images/API_hack.png",
+            "image": "Images/Practical_API_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_API_Hacking/",
             "category": "cybersecurity"
         },
         {
             "title": "Practical Bug Bounty",
-            "image": "Images/bug.png",
+            "image": "Images/Practical_Bug_Bounty.png",
             "link": "https://LexCode30.github.io/Practical_Bug_Bounty/",
             "category": "cybersecurity"
         },
         {
             "title": "Practical Ethical Hacking",
-            "image": "Images/ETH.png",
+            "image": "Images/Practical_Ethical_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_Ethical_Hacking/",
             "category": "cybersecurity"
         },
         {
             "title": "Practical Malware Analysis and Triage",
-            "image": "Images/malware.png",
+            "image": "Images/Practical_Malware_Analysis_and_Triage.png",
             "link": "https://LexCode30.github.io/Practical_Malware_Analysis_and_Triage/",
             "category": "cybersecurity"
         },
         {
             "title": "Practical Phishing Campaigns",
-            "image": "Images/phishing.png",
+            "image": "Images/Practical_Phishing_Campaigns.png",
             "link": "https://LexCode30.github.io/Practical_Phishing_Campaigns/",
             "category": "cybersecurity"
         },
         {
             "title": "Practical Web Hacking",
-            "image": "Images/web_hack.webp",
+            "image": "Images/Practical_Web_Hacking.png",
             "link": "https://LexCode30.github.io/Practical_Web_Hacking/",
             "category": "cybersecurity"
         },
         {
             "title": "Python 101 for Hackers",
-            "image": "Images/Python_101.png",
+            "image": "Images/Python_101_for_Hackers.png",
             "link": "https://LexCode30.github.io/Python_101_for_Hackers/",
             "category": "programming"
         },
         {
             "title": "Python 201 For Hackers",
-            "image": "Images/Python_201.png",
+            "image": "Images/Python_201_For_Hackers.png",
             "link": "https://LexCode30.github.io/Python_201_For_Hackers/",
             "category": "programming"
         },
         {
             "title": "Security Operations (SOC) 101",
-            "image": "Images/soc.webp",
+            "image": "Images/Security_Operations_-SOC-_101.png",
             "link": "https://LexCode30.github.io/Security_Operations_-SOC-_101/",
             "category": "cybersecurity"
         },
         {
             "title": "Security Operations (SOC) 201",
-            "image": "Images/SOC-201.png",
+            "image": "Images/Security_Operations_-SOC-_201.png",
             "link": "https://LexCode30.github.io/Security_Operations_-SOC-_201/",
             "category": "cybersecurity"
         },
@@ -240,6 +240,11 @@ const courses = [
 (function () {
   "use strict";
 
+  var INDEX_URL = "search-index.json";
+  var INDEX_CACHE = "cs:lib:index:v1";
+  var INDEX_MAX_AGE = 6 * 60 * 60 * 1000;   // refresh in the background after this
+  var VIDEO_PAGE = 25;                      // video results shown before "show more"
+
   /* The courses and this page are all served from the same origin, so the
      progress the course pages store in localStorage can be read here:
        cs:<slug>:v:<videoId>  one key per completed video
@@ -247,9 +252,11 @@ const courses = [
        cs:<slug>:total        how many videos the course has (cached below)
        cs:theme               dark or light, shared with the course pages */
 
-  var state = { search: "", category: "all", sort: "default" };
+  var state = { search: "", category: "all", sort: "default", shown: VIDEO_PAGE };
   var el = {};
   var progress = {};
+  var index = null;        // the video search index, once loaded
+  var indexState = "idle"; // idle | loading | ready | failed
 
   function slugOf(course) {
     return (course.link || "").replace(/\/+$/, "").split("/").pop();
@@ -314,6 +321,207 @@ const courses = [
         })
         .catch(function () { /* offline, or the course was removed */ });
     });
+  }
+
+  /* ---------- the video index ----------
+
+     Every course publishes course.json, and build-search-index.py folds them
+     into one file: courses, chapters and videos with the drive id each video
+     page is anchored on. It is only fetched when someone shows an interest in
+     searching, and then cached, so the library costs nothing extra to browse. */
+
+  function cachedIndex() {
+    var raw = read(INDEX_CACHE);
+    if (!raw) return null;
+    try {
+      var held = JSON.parse(raw);
+      if (!held || !held.data || !held.data.videos) return null;
+      return held;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  function storeIndex(data) {
+    write(INDEX_CACHE, JSON.stringify({ at: Date.now(), data: data }));
+  }
+
+  function fetchIndex() {
+    return fetch(INDEX_URL, { cache: "no-cache" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        return response.json();
+      })
+      .then(function (data) {
+        if (!data || !Array.isArray(data.videos)) throw new Error("bad index");
+        index = data;
+        storeIndex(data);
+        return data;
+      });
+  }
+
+  function ensureIndex() {
+    if (indexState === "ready" || indexState === "loading") return;
+
+    var held = cachedIndex();
+    if (held) {
+      index = held.data;
+      indexState = "ready";
+      render();
+      // Quietly pick up courses published since this was cached.
+      if (Date.now() - held.at > INDEX_MAX_AGE) {
+        fetchIndex().then(render).catch(function () { /* keep the cached one */ });
+      }
+      return;
+    }
+
+    indexState = "loading";
+    render();
+    fetchIndex()
+      .then(function () { indexState = "ready"; render(); })
+      .catch(function () { indexState = "failed"; render(); });
+  }
+
+  /* ---------- searching videos ---------- */
+
+  function terms() {
+    return state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  }
+
+  function matchingVideos() {
+    if (!index || !index.videos) return [];
+    var words = terms();
+    if (!words.length || state.search.trim().length < 2) return [];
+
+    var results = [];
+    for (var i = 0; i < index.videos.length; i++) {
+      var video = index.videos[i];
+      var chapter = index.chapters[video[0]];
+      var course = index.courses[chapter[0]];
+      if (state.category !== "all" && course[2] !== state.category) continue;
+
+      var title = video[1].toLowerCase();
+      var where = (chapter[2] + " " + course[0]).toLowerCase();
+      var score = 0;
+      var missed = false;
+      for (var w = 0; w < words.length; w++) {
+        if (title.indexOf(words[w]) !== -1) score += 3;
+        else if (where.indexOf(words[w]) !== -1) score += 1;
+        else { missed = true; break; }
+      }
+      if (missed) continue;
+      // A title that opens with the term is almost always the better hit.
+      if (title.indexOf(words[0]) === 0) score += 2;
+      results.push({ video: video, chapter: chapter, course: course, score: score });
+    }
+    results.sort(function (a, b) {
+      return b.score - a.score || a.video[1].localeCompare(b.video[1]);
+    });
+    return results;
+  }
+
+  function highlight(text, words) {
+    var fragment = document.createDocumentFragment();
+    var lower = text.toLowerCase();
+    var cursor = 0;
+    while (cursor < text.length) {
+      var at = -1, length = 0;
+      for (var w = 0; w < words.length; w++) {
+        var found = lower.indexOf(words[w], cursor);
+        if (found !== -1 && (at === -1 || found < at)) { at = found; length = words[w].length; }
+      }
+      if (at === -1) break;
+      if (at > cursor) fragment.appendChild(document.createTextNode(text.slice(cursor, at)));
+      var mark = document.createElement("mark");
+      mark.textContent = text.slice(at, at + length);
+      fragment.appendChild(mark);
+      cursor = at + length;
+    }
+    if (cursor < text.length) fragment.appendChild(document.createTextNode(text.slice(cursor)));
+    return fragment;
+  }
+
+  function buildVideoRow(hit, words) {
+    var course = hit.course, chapter = hit.chapter, video = hit.video;
+    var row = el_("li", "video-result");
+    var link = el_("a");
+    link.href = "https://lexcode30.github.io/" + course[1] + "/s" + chapter[1] + ".html#v-" + video[2];
+
+    var play = el_("span", "play");
+    var icon = el_("i", "fas fa-play");
+    icon.setAttribute("aria-hidden", "true");
+    play.appendChild(icon);
+
+    var lines = el_("div", "lines");
+    var name = el_("span", "name");
+    name.appendChild(highlight(video[1], words));
+    var where = el_("span", "where");
+    where.appendChild(document.createTextNode(course[0]));
+    var sep = el_("span", "sep", "\u203a");
+    where.appendChild(sep);
+    where.appendChild(document.createTextNode(chapter[2]));
+    lines.appendChild(name);
+    lines.appendChild(where);
+
+    var go = el_("span", "go");
+    var arrow = el_("i", "fas fa-arrow-right");
+    arrow.setAttribute("aria-hidden", "true");
+    go.appendChild(arrow);
+
+    link.appendChild(play);
+    link.appendChild(lines);
+    link.appendChild(go);
+    row.appendChild(link);
+    return row;
+  }
+
+  function renderVideos() {
+    var searching = state.search.trim().length >= 2;
+    el.indexState.hidden = true;
+
+    if (!searching) {
+      el.videosSection.hidden = true;
+      el.videoResults.textContent = "";
+      return 0;
+    }
+
+    if (indexState === "loading") {
+      el.videosSection.hidden = true;
+      el.indexState.hidden = false;
+      el.indexState.textContent = "";
+      el.indexState.appendChild(el_("span", "spinner"));
+      el.indexState.appendChild(el_("span", null, "Searching every video\u2026"));
+      return 0;
+    }
+    if (indexState === "failed") {
+      el.videosSection.hidden = true;
+      el.indexState.hidden = false;
+      el.indexState.textContent = "Video search is unavailable right now. Course titles are still searchable.";
+      return 0;
+    }
+    if (indexState !== "ready") { el.videosSection.hidden = true; return 0; }
+
+    var hits = matchingVideos();
+    if (!hits.length) {
+      el.videosSection.hidden = true;
+      el.videoResults.textContent = "";
+      el.videosHeading.textContent = "Videos";
+      el.showMore.hidden = true;
+      return 0;
+    }
+
+    var words = terms();
+    var visibleHits = hits.slice(0, state.shown);
+    el.videoResults.textContent = "";
+    var fragment = document.createDocumentFragment();
+    visibleHits.forEach(function (hit) { fragment.appendChild(buildVideoRow(hit, words)); });
+    el.videoResults.appendChild(fragment);
+
+    el.videosHeading.textContent = hits.length === 1 ? "1 video" : hits.length + " videos";
+    el.videosSection.hidden = false;
+    el.showMore.hidden = hits.length <= state.shown;
+    el.showMore.textContent = "Show " + Math.min(VIDEO_PAGE, hits.length - state.shown) + " more";
+    return hits.length;
   }
 
   /* ---------- building cards ---------- */
@@ -406,16 +614,27 @@ const courses = [
     list.forEach(function (course) { fragment.appendChild(buildCard(course)); });
     el.grid.appendChild(fragment);
 
-    el.empty.hidden = list.length > 0;
+    var searching = state.search.trim().length > 0;
     el.grid.hidden = list.length === 0;
+    el.coursesHeading.hidden = !searching || list.length === 0;
 
-    var filtering = state.search || state.category !== "all";
+    var videoCount = renderVideos();
+
+    // Only truly empty when neither a course nor a video matched, and the
+    // index is not still being fetched.
+    el.empty.hidden = list.length > 0 || videoCount > 0 || indexState === "loading";
+
+    var filtering = searching || state.category !== "all";
     el.reset.hidden = !filtering;
-    el.results.textContent = filtering
-      ? list.length + (list.length === 1 ? " course" : " courses") +
+    if (!filtering) {
+      el.results.textContent = "";
+    } else {
+      var parts = [list.length + (list.length === 1 ? " course" : " courses")];
+      if (videoCount) parts.push(videoCount + (videoCount === 1 ? " video" : " videos"));
+      el.results.textContent = parts.join(" \u00b7 ") +
         (state.search ? ' matching "' + state.search + '"' : "") +
-        (state.category !== "all" ? " in " + state.category.replace(/-/g, " ") : "")
-      : "";
+        (state.category !== "all" ? " in " + state.category.replace(/-/g, " ") : "");
+    }
 
     updateSummary();
   }
@@ -482,6 +701,19 @@ const courses = [
     };
   }
 
+  /* A search is worth linking to, so it lives in the URL. */
+  function rememberQuery() {
+    if (!window.history || !history.replaceState) return;
+    var url = location.pathname + (state.search ? "?q=" + encodeURIComponent(state.search) : "");
+    history.replaceState(null, "", url + location.hash);
+  }
+
+  function queryFromUrl() {
+    var match = /[?&]q=([^&]*)/.exec(location.search);
+    try { return match ? decodeURIComponent(match[1].replace(/\+/g, " ")) : ""; }
+    catch (err) { return ""; }
+  }
+
   function init() {
     el.grid = document.getElementById("courses-container");
     el.search = document.getElementById("search");
@@ -497,19 +729,40 @@ const courses = [
     el.statDone = document.getElementById("statDone");
     el.brandSub = document.getElementById("brandSub");
     el.librarySub = document.getElementById("librarySub");
+    el.coursesHeading = document.getElementById("courses-heading");
+    el.videosSection = document.getElementById("videos-section");
+    el.videosHeading = document.getElementById("videos-heading");
+    el.videoResults = document.getElementById("video-results");
+    el.showMore = document.getElementById("show-more");
+    el.indexState = document.getElementById("index-state");
 
     initTheme();
     readProgress();
     updateCounts();
+
+    var initial = queryFromUrl();
+    if (initial) {
+      state.search = initial;
+      el.search.value = initial;
+      el.clear.hidden = false;
+      if (initial.trim().length >= 2) ensureIndex();
+    }
+
     render();
     fetchTotals();
 
     var onSearch = debounce(function () {
       state.search = el.search.value;
+      state.shown = VIDEO_PAGE;
       el.clear.hidden = !state.search;
+      if (state.search.trim().length >= 2) ensureIndex();
       render();
+      rememberQuery();
     }, 200);
     el.search.addEventListener("input", onSearch);
+    // Fetch the index as soon as someone looks like they will search, so the
+    // first query does not wait for it.
+    el.search.addEventListener("focus", ensureIndex, { once: true });
     el.search.addEventListener("keydown", function (event) {
       if (event.key === "Escape") { el.search.value = ""; state.search = ""; el.clear.hidden = true; render(); el.search.blur(); }
     });
@@ -529,13 +782,19 @@ const courses = [
 
     el.sort.addEventListener("change", function () { state.sort = el.sort.value; render(); });
 
+    el.showMore.addEventListener("click", function () {
+      state.shown += VIDEO_PAGE;
+      render();
+    });
+
     el.reset.addEventListener("click", function () {
-      state.search = ""; state.category = "all"; state.sort = "default";
+      state.search = ""; state.category = "all"; state.sort = "default"; state.shown = VIDEO_PAGE;
       el.search.value = ""; el.clear.hidden = true; el.sort.value = "default";
       el.filters.querySelectorAll(".chip").forEach(function (chip) {
         chip.setAttribute("aria-pressed", chip.dataset.category === "all" ? "true" : "false");
       });
       render();
+      rememberQuery();
     });
 
     // "/" focuses search, the same shortcut the course pages use.

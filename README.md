@@ -9,15 +9,16 @@ Copy these into the `all` repository, replacing what is there:
 
 - `index.html`
 - `styles.css`
-- `script.js` — **see the note below**
+- `script.js` — already carries your live 39 courses
 - `favicon.svg` (new)
+- `search-index.json` (new) — the video search index
+- `build-search-index.py` (new) — regenerates that index
 
 Leave `Images/` exactly as it is.
 
-**Before replacing `script.js`, copy your current `courses` array into the new
-file**, replacing the single placeholder entry at the top. The array here was
-populated from your live catalog as an example, but yours is the source of
-truth. Everything below the array is new.
+`script.js` was populated from your live catalog, so its array already matches
+what is published. If you have added courses since, copy your current array in
+over it; everything below the array is new.
 
 ## What changed
 
@@ -62,6 +63,44 @@ Cards were built with `innerHTML` and unescaped values, so a course title
 containing a quote or `<` could break the card or inject markup, and an image
 path containing a quote broke the CSS `url()`. Cards are now built with
 `createElement` and `textContent`.
+
+## Searching every video
+
+The search box searches course titles **and the title of every video in every
+course**. Searching `nmap` lists the seven videos that teach it, each showing
+which course and chapter it belongs to, and clicking one opens that course at
+that exact video.
+
+It reads `search-index.json`: one file holding every course, chapter and video
+with the anchor its page uses. Measured on your library — 39 courses, 493
+chapters, 3,434 videos — that is 265 KB, about 132 KB over the wire. Fetching
+each course's `course.json` instead would be 981 KB across 39 requests.
+
+The index is **not** loaded when someone just browses the library. It is
+fetched when the search box is focused, then cached in this browser, and
+refreshed quietly in the background if it is more than six hours old. The
+category chips narrow video results as well as courses, long result lists page
+25 at a time, and a search is kept in the URL as `?q=nmap` so it can be shared.
+
+### Keeping the index current
+
+**The generator does this for you.** Publishing a course stages its videos,
+and at the end of the run they are merged into `search-index.json` in this
+repository in a single commit — one commit for a batch of twenty, not twenty
+copies of a quarter-megabyte file. Re-publishing a course replaces its entries
+rather than duplicating them. If the write fails, the run says so and the
+index is simply missing that batch.
+
+`build-search-index.py` rebuilds the file from scratch, by reading the
+published catalog and every course's `course.json`. Use it to repair the index
+after a failed write, or to build it the first time:
+
+```bash
+python3 build-search-index.py
+```
+
+Both routes produce a byte-identical file, so running the builder after the
+generator changes nothing.
 
 ## Generator compatibility
 

@@ -64,6 +64,10 @@
 
 html { font-size: 16px; scroll-behavior: smooth; }
 
+/* Several rules below set display on elements that are also toggled with the
+   hidden attribute; without this they would stay on screen. */
+[hidden] { display: none !important; }
+
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -308,4 +312,62 @@ h1, h2 { line-height: 1.25; letter-spacing: -0.02em; font-weight: 650; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* ---------- search across every video ---------- */
+.section-heading {
+  font-size: 1.05rem; font-weight: 650; color: var(--text-2);
+  margin-bottom: 0.2rem;
+}
+#videos-section { display: flex; flex-direction: column; gap: 0.7rem; }
+
+.video-results {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-radius: var(--r-lg);
+  background: var(--surface); overflow: hidden;
+}
+.video-result { border-bottom: 1px solid var(--border); }
+.video-result:last-child { border-bottom: 0; }
+.video-result a {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center; gap: 0.85rem; padding: 0.75rem 1.1rem;
+  transition: background var(--t-fast);
+}
+.video-result a:hover { background: var(--surface-2); }
+.video-result .play {
+  width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--primary-soft); color: var(--primary); font-size: 0.72rem;
+}
+.video-result .lines { display: flex; flex-direction: column; min-width: 0; }
+.video-result .name {
+  font-size: 0.92rem; font-weight: 550;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.video-result .where {
+  font-size: 0.76rem; color: var(--text-3);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.video-result .where .sep { opacity: 0.55; margin: 0 0.35rem; }
+.video-result .go { color: var(--text-3); font-size: 0.76rem; opacity: 0; transition: opacity var(--t-fast); }
+.video-result a:hover .go { opacity: 1; }
+.video-result mark {
+  background: color-mix(in srgb, var(--accent) 34%, transparent);
+  color: inherit; border-radius: 3px; padding: 0 0.1em;
+}
+
+.show-more { align-self: center; }
+.index-state {
+  display: flex; align-items: center; justify-content: center; gap: 0.55rem;
+  font-size: 0.84rem; color: var(--text-3); padding: 1.2rem;
+}
+.index-state .spinner {
+  width: 15px; height: 15px; border-radius: 50%; display: block;
+  border: 2px solid var(--border); border-top-color: var(--primary);
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 680px) {
+  .video-result a { grid-template-columns: auto minmax(0, 1fr); gap: 0.7rem; padding: 0.7rem 0.9rem; }
+  .video-result .go { display: none; }
 }
