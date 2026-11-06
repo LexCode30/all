@@ -270,6 +270,12 @@ const courses = [
             "image": "Images/Nmap.png",
             "link": "https://LexCode30.github.io/Nmap/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Intro to PowerShell Scripting",
+            "image": "Images/Intro_to_PowerShell_Scripting.png",
+            "link": "https://LexCode30.github.io/Intro_to_PowerShell_Scripting/",
+            "category": "programming"
         }
     ];
 
