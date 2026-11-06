@@ -264,6 +264,12 @@ const courses = [
             "image": "Images/Cybrary-Offensive_Penetration_Testing.png",
             "link": "https://LexCode30.github.io/Cybrary-Offensive_Penetration_Testing/",
             "category": "cybersecurity"
+        },
+        {
+            "title": "Nmap",
+            "image": "Images/Nmap.png",
+            "link": "https://LexCode30.github.io/Nmap/",
+            "category": "cybersecurity"
         }
     ];
 
