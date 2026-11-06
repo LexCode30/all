@@ -246,6 +246,12 @@ const courses = [
             "image": "Images/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming.png",
             "link": "https://LexCode30.github.io/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming/",
             "category": "programming"
+        },
+        {
+            "title": "CSharp Basics for Beginners - Learn CSharp Fundamentals by Coding",
+            "image": "Images/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding.png",
+            "link": "https://LexCode30.github.io/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding/",
+            "category": "programming"
         }
     ];
 
