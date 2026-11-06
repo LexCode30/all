@@ -235,48 +235,48 @@ const courses = [
             "link": "https://LexCode30.github.io/Windows_Server_2022_Administration/",
             "category": "cloud"
         },
-    {
-        "title": "CSharp Advanced Topics - Prepare for Technical Interviews",
-        "image": "Images/csharp3.webp",
-        "link": "https://LexCode30.github.io/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews/",
-        "category": "programming"
-    },
-    {
-        "title": "CSharp Intermediate - Classes, Interfaces and Object-oriented Programming",
-        "image": "Images/csharp2.webp",
-        "link": "https://LexCode30.github.io/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming/",
-        "category": "programming"
-    },
-    {
-        "title": "CSharp Basics for Beginners - Learn CSharp Fundamentals by Coding",
-        "image": "Images/csharp1.webp",
-        "link": "https://LexCode30.github.io/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding/",
-        "category": "programming"
-    },
-    {
-        "title": "Advanced Malware Analysis Redux",
-        "image": "Images/Advanced Malware Analysis Redux.webp",
-        "link": "https://LexCode30.github.io/Advanced_Malware_Analysis_Redux/",
-        "category": "cybersecurity"
-    },
-    {
-        "title": "Cybrary-Offensive Penetration Testing",
-        "image": "Images/Cybrary_offensive_penetration_testing.jpg",
-        "link": "https://LexCode30.github.io/Cybrary-Offensive_Penetration_Testing/",
-        "category": "cybersecurity"
-    },
-    {
-        "title": "Nmap",
-        "image": "Images/Nmap.webp",
-        "link": "https://LexCode30.github.io/Nmap/",
-        "category": "cybersecurity"
-    },
-    {
-        "title": "Intro to PowerShell Scripting",
-        "image": "Images/powershell_scripting.webp",
-        "link": "https://LexCode30.github.io/Intro_to_PowerShell_Scripting/",
-        "category": "programming"
-    }
+        {
+            "title": "CSharp Advanced Topics - Prepare for Technical Interviews",
+            "image": "Images/csharp3.webp",
+            "link": "https://LexCode30.github.io/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews/",
+            "category": "programming"
+        },
+        {
+            "title": "CSharp Intermediate - Classes, Interfaces and Object-oriented Programming",
+            "image": "Images/csharp2.webp",
+            "link": "https://LexCode30.github.io/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming/",
+            "category": "programming"
+        },
+        {
+            "title": "CSharp Basics for Beginners - Learn CSharp Fundamentals by Coding",
+            "image": "Images/csharp1.webp",
+            "link": "https://LexCode30.github.io/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding/",
+            "category": "programming"
+        },
+        {
+            "title": "Advanced Malware Analysis Redux",
+            "image": "Images/Advanced Malware Analysis Redux.webp",
+            "link": "https://LexCode30.github.io/Advanced_Malware_Analysis_Redux/",
+            "category": "cybersecurity"
+        },
+        {
+            "title": "Cybrary-Offensive Penetration Testing",
+            "image": "Images/Cybrary_offensive_penetration_testing.jpg",
+            "link": "https://LexCode30.github.io/Cybrary-Offensive_Penetration_Testing/",
+            "category": "cybersecurity"
+        },
+        {
+            "title": "Nmap",
+            "image": "Images/Nmap.webp",
+            "link": "https://LexCode30.github.io/Nmap/",
+            "category": "cybersecurity"
+        },
+        {
+            "title": "Intro to PowerShell Scripting",
+            "image": "Images/powershell_scripting.webp",
+            "link": "https://LexCode30.github.io/Intro_to_PowerShell_Scripting/",
+            "category": "programming"
+        }
     ];
 
 (function () {
@@ -284,7 +284,6 @@ const courses = [
 
   var INDEX_URL = "search-index.json";
   var INDEX_CACHE = "cs:lib:index:v1";
-  var INDEX_MAX_AGE = 6 * 60 * 60 * 1000;   // refresh in the background after this
   var VIDEO_PAGE = 25;                      // video results shown before "show more"
 
   /* The courses and this page are all served from the same origin, so the
@@ -297,8 +296,9 @@ const courses = [
   var state = { search: "", category: "all", sort: "default", shown: VIDEO_PAGE };
   var el = {};
   var progress = {};
-  var index = null;        // the video search index, once loaded
-  var indexState = "idle"; // idle | loading | ready | failed
+  var index = null;         // the video search index, once loaded
+  var indexState = "idle";  // idle | loading | ready | failed
+  var indexChecked = false; // has the server been asked about it this visit
 
   function slugOf(course) {
     return (course.link || "").replace(/\/+$/, "").split("/").pop();
@@ -402,26 +402,47 @@ const courses = [
       });
   }
 
+  /* The list of courses above is always current - the generator rewrites it
+     on every publish - so it says whether a cached index has gone stale. */
+  function indexCoversCatalog(data) {
+    if (!data || !data.courses) return false;
+    var known = {};
+    data.courses.forEach(function (entry) { known[entry[1]] = true; });
+    for (var i = 0; i < courses.length; i++) {
+      if (!known[slugOf(courses[i])]) return false;
+    }
+    return true;
+  }
+
   function ensureIndex() {
-    if (indexState === "ready" || indexState === "loading") return;
+    if (indexState === "loading" || indexChecked) return;
+    indexChecked = true;
 
     var held = cachedIndex();
-    if (held) {
+    if (held && indexCoursesCovered(held)) {
+      // Complete as far as the catalog goes: search straight away.
       index = held.data;
       indexState = "ready";
-      render();
-      // Quietly pick up courses published since this was cached.
-      if (Date.now() - held.at > INDEX_MAX_AGE) {
-        fetchIndex().then(render).catch(function () { /* keep the cached one */ });
-      }
-      return;
+    } else {
+      // Either nothing cached, or courses have been published since. Showing
+      // the old index would quietly leave the new courses' videos out.
+      indexState = "loading";
     }
-
-    indexState = "loading";
     render();
+
+    // Always ask the server, cached or not. The request revalidates, so an
+    // unchanged index costs a 304 rather than another download.
     fetchIndex()
       .then(function () { indexState = "ready"; render(); })
-      .catch(function () { indexState = "failed"; render(); });
+      .catch(function () {
+        if (held) { index = held.data; indexState = "ready"; }
+        else { indexState = "failed"; }
+        render();
+      });
+  }
+
+  function indexCoursesCovered(held) {
+    return !!held && indexCoversCatalog(held.data);
   }
 
   /* ---------- searching videos ---------- */
