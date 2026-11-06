@@ -240,6 +240,12 @@ const courses = [
             "image": "Images/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews.png",
             "link": "https://LexCode30.github.io/CSharp_Advanced_Topics_-_Prepare_for_Technical_Interviews/",
             "category": "programming"
+        },
+        {
+            "title": "CSharp Intermediate - Classes, Interfaces and Object-oriented Programming",
+            "image": "Images/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming.png",
+            "link": "https://LexCode30.github.io/CSharp_Intermediate_-_Classes-_Interfaces_and_Object-oriented_Programming/",
+            "category": "programming"
         }
     ];
 
