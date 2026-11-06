@@ -252,6 +252,12 @@ const courses = [
             "image": "Images/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding.png",
             "link": "https://LexCode30.github.io/CSharp_Basics_for_Beginners_-_Learn_CSharp_Fundamentals_by_Coding/",
             "category": "programming"
+        },
+        {
+            "title": "Advanced Malware Analysis Redux",
+            "image": "Images/Advanced_Malware_Analysis_Redux.png",
+            "link": "https://LexCode30.github.io/Advanced_Malware_Analysis_Redux/",
+            "category": "cybersecurity"
         }
     ];
 
